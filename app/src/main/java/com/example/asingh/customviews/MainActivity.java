@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +12,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final MyTextView yellowView = (MyTextView) findViewById(R.id.viewYellow);
+        yellowView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yellowView.incrementAndUpdate();
+            }
+        });
+
+        final MyTextView greenView = (MyTextView) findViewById(R.id.viewGreen);
+        greenView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                greenView.incrementAndUpdate();
+            }
+        });
+
+        final MyTextView redView = (MyTextView) findViewById(R.id.viewRed);
+        redView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redView.incrementAndUpdate();
+            }
+        });
+
+        final MyTextView blueView = (MyTextView) findViewById(R.id.viewBlue);
+        blueView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                blueView.incrementAndUpdate();
+            }
+        });
     }
 
     @Override
